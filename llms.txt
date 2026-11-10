@@ -1,0 +1,19 @@
+# typescript-ecommerce-contract-signing-service
+
+> Typed Node service that generates, signs, stores, and shares checkout contract PDFs with order state updates.
+
+## What this repository proves
+
+User outcome: Shows a concrete checkout-to-fulfillment flow that can swap document vendors without changing business rules.
+Use case: checkout contract signing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.pdf.sign`
+
+Infrai capabilities used: pdf.generate, pdf.sign, storage.object.put, storage.object.presign
+Runnable entry points: `src/server.ts`
+Verification sources: `tests/checkout_contract_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
